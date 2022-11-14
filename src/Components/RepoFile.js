@@ -5,24 +5,23 @@ import { Helmet } from 'react-helmet-async';
 const RepoFile = () => {
   const [repos, setRepos] = useState([]);
   const [Loading, setLoading] = useState(true);
-  const  params  = useParams();
-  const githubLink = `https://github.com/joannaamy/${params}`;
+  const   { repoId }  = useParams();
+  const githubLink = `https://github.com/joannaamy/${repoId}`;
   
   useEffect(() => {
-    const link = `https://api.github.com/repos/joannaamy/${params}`;
+    const link = `https://api.github.com/repos/joannaamy/${repoId}`;
     const fetchUsers = async () => {
       const res = await fetch(link)
       const data = await res.json();
       setRepos(data)
+      console.log(data)
       setLoading(false)
     };
     fetchUsers();
   }, []);
 //  
-  let dateObj = new Date(repos.created_at);
-  const myDate = (dateObj.getUTCFullYear()) + "/" + (dateObj.getMonth() + 1) + "/" + (dateObj.getUTCDate());
-
-  return Loading ? (<h1>LOADING....
+  
+  return Loading ? (<h1>Loading....
   </h1>) : (
     <div>
       <Helmet>
@@ -35,14 +34,13 @@ const RepoFile = () => {
 
       <div>
         <div className="repo-top">
-          <h2 className="fileName"> {repos.name} </h2>
-          <p className="fileDate">{myDate}</p>
+          
         </div>
         <div className="desc-container">
           
           <div className="singrepo-links">
-            <a className="viewMore" href={githubLink}>VIEW REPOSITORIES</a>
-            <Link className="return" to="/repos">REPOSITORIES</Link>
+            {/* <a className="viewMore" href={githubLink}>VIEW REPOSITORIES</a>
+            <Link className="return" to="/repos">REPOSITORIES</Link> */}
           </div>
         </div>
       </div>

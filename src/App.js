@@ -9,6 +9,7 @@ import RepoDetails from "./Components/RepoDetails";
 import { ErrorBoundary } from "./Components/ErrorBoundary";
 import RepoFile from "./Components/RepoFile";
 import Home from "./Components/Home";
+import Details from "./Components/Details";
 
 export default function App() {
   return (
@@ -22,9 +23,9 @@ export default function App() {
               <Route path="/home" element= {<Home />} />
               <Route path="/errorpage" element={<ErrorPage />} />
               <Route path="/repos" element={<Repo />} />
-              <Route index element={<Repo />} />
-              <Route path="/repo/:repoId" element={<RepoFile />} />
-              {/* <Route path="*" element={<NotFound />} /> */}
+              {/* <Route index element={<Repo />} /> */}
+              <Route path="/repos/:repoId" element={<Details />} />
+              <Route path="*" element={<NotFound />} />
             </Routes> 
           </BrowserRouter>
         </div>

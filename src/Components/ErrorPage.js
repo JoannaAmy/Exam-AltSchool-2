@@ -5,13 +5,13 @@ const ErrorPage = () => {
   function myCount() {
     setCount((prevCount) => prevCount + 1);
   }
-  if (count > 2) {
+  if (count > 0) {
     throw new Error("Oops!! An Error occured");
   }
   return (
     <div className="ErrorPage">
-      <h2>{count}</h2>
-      <button onClick={myCount}>Click Me</button>
+      {/* <h2>{count}</h2> */}
+      <button className="error" onClick={myCount}>CLICK ME</button>
     </div>
   );
 };

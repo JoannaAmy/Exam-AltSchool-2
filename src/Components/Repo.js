@@ -42,7 +42,9 @@ import { Helmet } from "react-helmet-async";
       title={item.name}
       index={index}
       owner={item.owner.login}
-      id={item.name}
+      id={item.id}
+      description  ={item.description}
+      Avatar={item.owner.avatar_url}
     />
   ));
 
@@ -53,8 +55,8 @@ import { Helmet } from "react-helmet-async";
     pageNumbersArr.push(i);
   }
 
-  // Map over Page Array and Change page
-  const pageNumbers = pageNumbersArr.map((number) => {
+  // Page Array and Change page
+  const numberOfPage = pageNumbersArr.map((number) => {
     return (
       <button
         key={number}
@@ -94,7 +96,7 @@ import { Helmet } from "react-helmet-async";
             >
               PREVIOUS
             </button>
-            <div className="pagination">{pageNumbers}</div>
+            <div className="pagination">{numberOfPage}</div>
             <button
               className="page-link"
               disabled={currentPage >= reposLength}
