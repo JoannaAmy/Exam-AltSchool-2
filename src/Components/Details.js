@@ -1,11 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import {
-    AiOutlineStar,
-    AiOutlineFork,
-  } from "react-icons/ai";
-
-
 
 export default function Details() {
   const { repoId } = useParams();
@@ -28,41 +22,35 @@ export default function Details() {
     fetchUsers();
   }, []);
 
-//   let dateObj = new Date(repos.created_at);
-//   const myDate =
-//     dateObj.getUTCFullYear() +
-//     "/" +
-//     (dateObj.getMonth() + 1) +
-//     "/" +
-//     dateObj.getUTCDate();
-
   return (
     <>
-    <div>
-      <div className="particulars">
-        <h1 className="fileName"> {repos.name} </h1>
-        {/* <img src={repos.owner.avatar_url} alt="Joanna's DP" /> */}
-        <p>{repos.full_name}</p>
-        {/* <p className="Date">DATE: {myDate}</p> */}
-        <p>{repos.language}</p>
-        <p className="date">
-          {" "}
-          CREATED ON {new Date(repos.created_at).toDateString()}
-          <br></br>
-          LAST UPDATE {new Date(repos.updated_at).toDateString()}
-        </p>{" "}
+    <div className="all">
+      <div className="detailRepo">
+        <div className="particulars">
+          <h1 className="repoName"> {repos.name} </h1>
+          {/* <p>NAME: {repos.owner.login}</p> */}
+          <p>LANGUAGE: {repos.language ? repos.language : "No language Used"}</p>
+          <p>DEFAULT BRANCH: {repos.default_branch}</p>
+          <p className="date">
+            CREATED ON {new Date(repos.created_at).toDateString()}
+            </p>
+            <p className="date">
+            LAST UPDATE {new Date(repos.updated_at).toDateString()}
+          </p>
+          <p>VISIBILITY: {repos.visibility}</p>
+        </div>
       </div>
       <button>
-        <a className="viewMore" href={repos.html_url}>
-          VIEW REPOSITORIES
-        </a>
-      </button>
-      <button>
-        <Link className="return" to="/repos">
-          REPOSITORIES
-        </Link>
-      </button>
-    </div>
+            <a className="more" href={repos.html_url}>
+              VIEW REPO ON GITHUB
+            </a>
+          </button>
+          <button>
+            <Link className="more" to="/repos">
+              REPOSITORIES
+            </Link>
+          </button>
+      </div>
     </>
   );
 }
