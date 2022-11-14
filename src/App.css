@@ -45,33 +45,41 @@ button {
   padding: 1em;
   border-radius: 5px;
   border: 2px solid green;
-  margin: 1px;
+  margin: 1rem;
+  /* position: fixed; */
+  left: 50%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination,
-.page{
+.page {
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-  text-align:center;
+  /* gap: 1rem; */
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .All {
-/* text-align: center; */
+  /* text-align: center; */
 }
 
-.intro{
+.intro {
   border: 2px solid black;
-  color:orchid;
+  color: orchid;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:auto;
+  width: auto;
   height: 35rem;
   padding: 2rem;
-box-shadow: rgba(249, 253, 254, 0.25) 0px 6px 12px -2px,
-rgba(246, 242, 245, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(249, 253, 254, 0.25) 0px 6px 12px -2px,
+    rgba(246, 242, 245, 0.3) 0px 3px 7px -3px;
 }
 .home {
   display: flex;
@@ -97,7 +105,7 @@ rgba(246, 242, 245, 0.3) 0px 3px 7px -3px;
   background-color: orchid;
 }
 
-.detailRepo{
+.detailRepo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,14 +116,13 @@ rgba(246, 242, 245, 0.3) 0px 3px 7px -3px;
   margin: 2rem;
   text-align: center;
 }
-.all{
+.all {
   text-align: center;
-
 }
 
-.particulars{
+.particulars {
   border: 2px solid black;
-  color:orchid;
+  color: orchid;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,36 +130,33 @@ rgba(246, 242, 245, 0.3) 0px 3px 7px -3px;
   width: auto;
   height: 30em;
   padding: 2rem;
-box-shadow: rgba(249, 253, 254, 0.25) 0px 6px 12px -2px,
-rgba(246, 242, 245, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(249, 253, 254, 0.25) 0px 6px 12px -2px,
+    rgba(246, 242, 245, 0.3) 0px 3px 7px -3px;
 }
-
 
 .repo-details {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   margin-top: 1.6rem;
-  box-shadow:  0 0 4px 0 rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.7);
 }
-.more{
-  display:flex;
+.more {
+  display: flex;
   margin: 1rem;
-
 }
 
 .repo-container {
   border-radius: 10px;
   padding: 1rem;
   width: auto;
-  cursor: pointer;
   color: orchid;
   background-color: #131313;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   box-shadow: rgba(249, 253, 254, 0.25) 0px 6px 12px -2px,
-rgba(246, 242, 245, 0.3) 0px 3px 7px -3px;
+    rgba(246, 242, 245, 0.3) 0px 3px 7px -3px;
 }
 .avatar {
   border-radius: 50%;
@@ -163,6 +167,6 @@ img {
   width: 5rem;
   object-fit: cover;
 }
-.repoName{
+.repoName {
   text-transform: uppercase;
 }

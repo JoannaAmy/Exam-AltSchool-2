@@ -88,7 +88,7 @@ function Repos() {
               aria-disabled={currentPage <= 1}
               onClick={() => setCurrentPage((prev) => prev - 1)}
             >
-              PREVIOUS
+              PREV
             </button>
             {/* <div className="page">{numberOfPage}</div> */}
             <button
