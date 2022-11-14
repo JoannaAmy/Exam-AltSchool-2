@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  color: orchid;
 }
 .Navbar {
   padding: 10px;
@@ -57,7 +58,6 @@ button {
 }
 .All {
 /* text-align: center; */
-margin: 2rem;
 }
 
 .intro{
@@ -86,12 +86,15 @@ rgba(246, 242, 245, 0.3) 0px 3px 7px -3px;
   text-align: center;
   margin-top: auto;
   padding-top: 15rem;
+  color: white;
   justify-content: center;
 }
 .error {
   padding: 1rem;
   border-radius: 1rem;
   font-size: larger;
+  color: black;
+  background-color: orchid;
 }
 
 .detailRepo{
