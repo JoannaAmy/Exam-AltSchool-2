@@ -144,7 +144,7 @@ rgba(246, 242, 245, 0.3) 0px 3px 7px -3px;
 .repo-container {
   border-radius: 10px;
   padding: 1rem;
-  width: 39rem;
+  width: auto;
   cursor: pointer;
   color: orchid;
   background-color: #131313;
