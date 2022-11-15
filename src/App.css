@@ -14,7 +14,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .Navbar {
-    padding: 1.5rem;
+    padding: 1rem;
   }
   .navLink {
     padding: 0.3rem;
@@ -186,6 +186,6 @@ img {
 @media screen and (max-width: 768px) {
   body {
     font-size: 12px;
-    width: auto;
+    width: 25rem;
   }
 }
