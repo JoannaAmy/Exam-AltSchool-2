@@ -12,6 +12,21 @@ body {
   position: sticky;
 }
 
+@media screen and (max-width: 768px) {
+  .Navbar {
+    padding: 1.5rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .Navbar {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .navbar {
+    padding: 0.7rem;
+  }
+}
 .navLink {
   margin-left: auto;
   font-size: 1.5rem;
@@ -115,11 +130,8 @@ button {
   width: auto;
   margin: 2rem;
   text-align: center;
+}
 
-  @media screen and (max-width: 768px) {
-    padding: 1rem;
-}
-}
 .all {
   text-align: center;
 }
