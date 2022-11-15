@@ -18,12 +18,12 @@ body {
   }
   .navLink {
     padding: 0.3rem;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     display: flex;
   }
 
   .navButton {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 }
 
