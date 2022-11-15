@@ -16,17 +16,16 @@ body {
   .Navbar {
     padding: 1.5rem;
   }
-}
-@media screen and (max-width: 425px) {
-  .Navbar {
-    padding: 1rem;
+  .navLink {
+    padding: 0.3rem;
+    font-size: 0.5rem;
+  }
+
+  .navButton {
+    font-size: 0.5rem;
   }
 }
-@media screen and (max-width: 320px) {
-  .navbar {
-    padding: 0.7rem;
-  }
-}
+
 .navLink {
   margin-left: auto;
   font-size: 1.5rem;
