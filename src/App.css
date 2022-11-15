@@ -115,6 +115,10 @@ button {
   width: auto;
   margin: 2rem;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+}
 }
 .all {
   text-align: center;
@@ -169,4 +173,10 @@ img {
 }
 .repoName {
   text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+    width: 25rem;
+  }
 }
